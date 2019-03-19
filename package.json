@@ -1,6 +1,6 @@
 {
   "name": "ks-vcode",
-  "description": "",
+  "description": "验证码输入",
   "version": "0.1.5",
   "license": "MIT",
   "private": false,
