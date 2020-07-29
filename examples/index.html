@@ -5,8 +5,24 @@
     <title>vcode</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <v-code mode="both" :len="4" @change="vcodeChange" @complete="vcodeComplete"></v-code>
+    </div>
     <script src="vue.min.js"></script>
     <script src="../lib/vcode.js"></script>
+    <script>
+      Vue.use(window['ks-vcode'])
+      new Vue({
+        el: '#app',
+        methods: {
+          vcodeChange(code, index) {
+            console.log("vcodeChange", code, index)
+          },
+          vcodeComplete(code) {
+            console.log("vcodeComplete", code)
+          }
+        }
+      })
+    </script>
   </body>
 </html>
