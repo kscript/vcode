@@ -1,15 +1,17 @@
 <template>
-  <v-code mode="none" :len="4" @vcodeChange="vcodeChange"></v-code>
+  <v-code ref="vcode" mode="both" :len="5" @change="vcodeChange" @complete="vcodeComplete"></v-code>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {}
   },
   methods: {
-    vcodeChange (code, index) {
-      console.log(code, index)
-      // ...
+    vcodeChange(code, index) {
+      console.log("vcodeChange", code, index)
+    },
+    vcodeComplete(code) {
+      console.log("vcodeComplete", code)
     }
   }
 }

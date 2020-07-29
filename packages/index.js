@@ -1,4 +1,3 @@
-// 导入颜色选择器组件
 import vcode from './Vcode'
 
 export const Vcode = vcode;
